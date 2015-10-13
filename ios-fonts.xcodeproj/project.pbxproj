@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8920120F1BCCA5BD006EA89C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920120E1BCCA5BD006EA89C /* AppDelegate.swift */; };
-		892012111BCCA5BD006EA89C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892012101BCCA5BD006EA89C /* ViewController.swift */; };
 		892012141BCCA5BD006EA89C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892012121BCCA5BD006EA89C /* Main.storyboard */; };
 		892012161BCCA5BE006EA89C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 892012151BCCA5BE006EA89C /* Assets.xcassets */; };
 		892012191BCCA5BE006EA89C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892012171BCCA5BE006EA89C /* LaunchScreen.storyboard */; };
@@ -16,6 +15,7 @@
 		8920122F1BCCA5BE006EA89C /* ios_fontsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920122E1BCCA5BE006EA89C /* ios_fontsUITests.swift */; };
 		8920123D1BCCA5F3006EA89C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8920123C1BCCA5F3006EA89C /* .gitignore */; settings = {ASSET_TAGS = (); }; };
 		F3756D0C1BCD5AB200AA944D /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3756D0B1BCD5AB200AA944D /* FavoritesList.swift */; settings = {ASSET_TAGS = (); }; };
+		F3756D0E1BCD631F00AA944D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3756D0D1BCD631F00AA944D /* RootViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 /* Begin PBXFileReference section */
 		8920120B1BCCA5BD006EA89C /* ios-fonts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-fonts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8920120E1BCCA5BD006EA89C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		892012101BCCA5BD006EA89C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		892012131BCCA5BD006EA89C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		892012151BCCA5BE006EA89C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		892012181BCCA5BE006EA89C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		892012301BCCA5BE006EA89C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8920123C1BCCA5F3006EA89C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F3756D0B1BCD5AB200AA944D /* FavoritesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
+		F3756D0D1BCD631F00AA944D /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +103,12 @@
 			isa = PBXGroup;
 			children = (
 				8920120E1BCCA5BD006EA89C /* AppDelegate.swift */,
-				892012101BCCA5BD006EA89C /* ViewController.swift */,
 				892012121BCCA5BD006EA89C /* Main.storyboard */,
 				892012151BCCA5BE006EA89C /* Assets.xcassets */,
 				892012171BCCA5BE006EA89C /* LaunchScreen.storyboard */,
 				8920121A1BCCA5BE006EA89C /* Info.plist */,
 				F3756D0B1BCD5AB200AA944D /* FavoritesList.swift */,
+				F3756D0D1BCD631F00AA944D /* RootViewController.swift */,
 			);
 			path = "ios-fonts";
 			sourceTree = "<group>";
@@ -262,9 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				892012111BCCA5BD006EA89C /* ViewController.swift in Sources */,
 				8920120F1BCCA5BD006EA89C /* AppDelegate.swift in Sources */,
 				F3756D0C1BCD5AB200AA944D /* FavoritesList.swift in Sources */,
+				F3756D0E1BCD631F00AA944D /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
