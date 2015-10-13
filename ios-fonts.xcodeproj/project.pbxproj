@@ -15,6 +15,7 @@
 		892012241BCCA5BE006EA89C /* ios_fontsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892012231BCCA5BE006EA89C /* ios_fontsTests.swift */; };
 		8920122F1BCCA5BE006EA89C /* ios_fontsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920122E1BCCA5BE006EA89C /* ios_fontsUITests.swift */; };
 		8920123D1BCCA5F3006EA89C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8920123C1BCCA5F3006EA89C /* .gitignore */; settings = {ASSET_TAGS = (); }; };
+		F3756D0C1BCD5AB200AA944D /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3756D0B1BCD5AB200AA944D /* FavoritesList.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8920122E1BCCA5BE006EA89C /* ios_fontsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_fontsUITests.swift; sourceTree = "<group>"; };
 		892012301BCCA5BE006EA89C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8920123C1BCCA5F3006EA89C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F3756D0B1BCD5AB200AA944D /* FavoritesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				892012151BCCA5BE006EA89C /* Assets.xcassets */,
 				892012171BCCA5BE006EA89C /* LaunchScreen.storyboard */,
 				8920121A1BCCA5BE006EA89C /* Info.plist */,
+				F3756D0B1BCD5AB200AA944D /* FavoritesList.swift */,
 			);
 			path = "ios-fonts";
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				892012111BCCA5BD006EA89C /* ViewController.swift in Sources */,
 				8920120F1BCCA5BD006EA89C /* AppDelegate.swift in Sources */,
+				F3756D0C1BCD5AB200AA944D /* FavoritesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +491,7 @@
 				892012351BCCA5BE006EA89C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		892012361BCCA5BE006EA89C /* Build configuration list for PBXNativeTarget "ios-fontsTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +500,7 @@
 				892012381BCCA5BE006EA89C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		892012391BCCA5BE006EA89C /* Build configuration list for PBXNativeTarget "ios-fontsUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +509,7 @@
 				8920123B1BCCA5BE006EA89C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
