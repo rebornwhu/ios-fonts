@@ -28,18 +28,50 @@ class RootViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return favoritesList.favorites.isEmpty ? 1 : 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return section == 0 ? familyNames.count : 1
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return section == 0 ? "All Font Families" : "My Favorite Fonts"
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier(familyCell, forIndexPath: indexPath)
+            cell.textLabel?.font = fontForDisplay(atIndexPath: indexPath)
+            cell.textLabel?.text = familyNames[indexPath.row]
+            cell.detailTextLabel?.text = familyNames[indexPath.row]
+            return cell
+        }
+        else {
+            return tableView.dequeueReusableCellWithIdentifier(favoritesCell, forIndexPath: indexPath)
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+    }
+    
+    func fontForDisplay(atIndexPath indexPath: NSIndexPath) -> UIFont? {
+        if indexPath.section == 0 {
+            let familyName = familyNames[indexPath.row]
+            let fontName = UIFont.fontNamesForFamilyName(familyName).first
+            
+            if fontName != nil {
+                return UIFont(name: fontName!, size: cellPointSize)
+            }
+            else {
+                return nil
+            }
+        }
+        else {
+            return nil
+        }
     }
 
 }
