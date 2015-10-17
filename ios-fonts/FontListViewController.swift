@@ -53,7 +53,25 @@ class FontListViewController: UITableViewController {
 
         return cell
     }
-
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return showsFavorites
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if !showsFavorites {
+            return
+        }
+        
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            let favorite = fontNames[indexPath.row]
+            FavoritesList.sharedfavoritesList.removeFavorite(favorite)
+            fontNames = FavoritesList.sharedfavoritesList.favorites
+            
+            // todo check the value of indexPath
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+        }
+    }
 
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
