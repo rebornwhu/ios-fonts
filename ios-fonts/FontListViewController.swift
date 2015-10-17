@@ -20,6 +20,10 @@ class FontListViewController: UITableViewController {
 
         let preferredTableViewFont = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         cellPointSize = preferredTableViewFont.pointSize
+        
+        if showsFavorites {
+            navigationItem.rightBarButtonItem = editButtonItem()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,6 +75,10 @@ class FontListViewController: UITableViewController {
             // todo check the value of indexPath
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         }
+    }
+    
+    override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        fontNames = FavoritesList.sharedfavoritesList.favorites
     }
 
     // MARK: - Navigation
