@@ -89,14 +89,15 @@ class FontListViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let tableViewCell = sender as! UITableViewCell
+        let indexPath = tableView.indexPathForCell(tableViewCell)!
+        let font = fontForDisplay(atIndexPath: indexPath)
+        
+        let sizesVC = segue.destinationViewController as! FontSizesViewController
+        sizesVC.title = font.fontName
+        sizesVC.font = font
     }
-    */
-
 }

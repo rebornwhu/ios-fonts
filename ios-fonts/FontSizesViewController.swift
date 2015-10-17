@@ -21,7 +21,6 @@ class FontSizesViewController: UITableViewController {
     }
     
     private let cellIdentifier = "FontNameAndSize"
-    
 
     // MARK: - Table view data source
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
