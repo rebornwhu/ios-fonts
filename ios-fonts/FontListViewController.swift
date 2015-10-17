@@ -54,41 +54,6 @@ class FontListViewController: UITableViewController {
         return cell
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
 
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -96,8 +61,16 @@ class FontListViewController: UITableViewController {
         let indexPath = tableView.indexPathForCell(tableViewCell)!
         let font = fontForDisplay(atIndexPath: indexPath)
         
-        let sizesVC = segue.destinationViewController as! FontSizesViewController
-        sizesVC.title = font.fontName
-        sizesVC.font = font
+        if segue.identifier == "ShowFontSizes" {
+            let sizesVC = segue.destinationViewController as! FontSizesViewController
+            sizesVC.title = font.fontName
+            sizesVC.font = font
+        }
+        else {
+            let infoVC = segue.destinationViewController as! FontInfoViewController
+            infoVC.font = font
+            infoVC.favorite = FavoritesList.sharedfavoritesList.favorites.contains(font.fontName)
+        }
     }
+    
 }

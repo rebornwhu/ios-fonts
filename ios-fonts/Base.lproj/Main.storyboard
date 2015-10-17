@@ -119,7 +119,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="VTL-qN-Tvm" kind="show" id="JGW-2o-V1x"/>
+                                    <segue destination="VTL-qN-Tvm" kind="show" identifier="ShowFontSizes" id="JGW-2o-V1x"/>
                                     <segue destination="rjX-qc-dER" kind="show" identifier="ShowFontInfo" trigger="accessoryAction" id="KgB-2g-bI8"/>
                                 </connections>
                             </tableViewCell>
